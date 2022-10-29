@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-# -*- coding: utf-8 -*-
 import torch.nn as nn
 import math
 
@@ -40,7 +39,7 @@ class SEModule_small(nn.Module):
 
     
 class PA(nn.Module):
-    '''PA is pixel attention'''
+    '''PA: pixel attention'''
     def __init__(self, nf):
 
         super(PA, self).__init__()
@@ -753,30 +752,7 @@ class DRCB(nn.Module):
             
         self.__delattr__('rbr_dense')
 
-'''
-if __name__ == '__main__':
-    x = torch.randn(1, 64, 224, 224)
-    model = RepVGGBlock(64, 64, 3,  groups=1, dynamic=True)
-    #model = RepCondConv(64, 64, 3)
-    model.eval()
 
-    for module in model.modules():
-        if isinstance(module, torch.nn.BatchNorm2d):
-            nn.init.uniform_(module.running_mean, 0, 0.1)
-            nn.init.uniform_(module.running_var, 0, 0.1)
-            nn.init.uniform_(module.weight, 0, 0.1)
-            nn.init.uniform_(module.bias, 0, 0.1)
-
-    train_y,_ = model(x)
-    for module in model.modules():
-        if hasattr(module, 'switch_to_deploy'):
-            module.switch_to_deploy()
-
-    print(model)
-    deploy_y,_ = model(x)
-    print('========================== The diff is')
-    print(((train_y - deploy_y) ** 2).sum())
-'''    
 if __name__ == '__main__':
     #from torchsummaryX import summary
     x = torch.randn(1, 32, 56, 56)
