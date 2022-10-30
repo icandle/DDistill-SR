@@ -335,7 +335,7 @@ class DDistill_SR(nn.Module):
                     
         return output.clamp(0,1)
     
-def repvgg_model_convert(model:torch.nn.Module, save_path=None, do_copy=True):
+def model_convert(model:torch.nn.Module, save_path=None, do_copy=True):
     if do_copy:
         model = copy.deepcopy(model)
     for module in model.modules():
@@ -348,17 +348,17 @@ def repvgg_model_convert(model:torch.nn.Module, save_path=None, do_copy=True):
 if __name__ == "__main__":
     
     model = DDistill_SR(in_nc=3, out_nc=3, nf = 56, num_modules=4, scale=4, deploy=False, dynamic=True, L = 16, style = 'DBB')
-    model.load_state_dict(torch.load(r'model-backup/RepDSRx4.pth'))
-    #experiments\DFDN_DBBx4\models\245000_G.pth
+    model.load_state_dict(torch.load(r'model-backup/DDistillSRx4.pth'))
+
     from PIL import Image
     import torchvision.transforms as transforms
+    
     model.eval()
     
-    model_inference = repvgg_model_convert(model)
+    model_inference = model_convert(model)
  
-    img = Image.open(r'Set5/LR_bicubic/X4/babyx4.png').convert('RGB')#35.jpg
-        #img.show()vid.png
-        #img = transforms.Resize([540, 960])(img)Set14/LR_bicubic/X4/ppt3x4.png
+    img = Image.open(r'Set5/LR_bicubic/X4/babyx4.png').convert('RGB')
+    
     x = transforms.ToTensor()(img)    
     x = x.unsqueeze(0)
     out1 = model(x)
