@@ -6,9 +6,5 @@
 
 3. Run 'Prepare_TrainData_HR_LR_BI/BD/DN.m' in matlab to generate LR images for BI, BD, and DN models respectively.
 
-4. Run 'th png_to_t7.lua' to convert each .png image to .t7 file in new folder 'DIV2K_decoded'.
-
-5. Specify the path of 'DIV2K_decoded' to '-datadir' in 'RDN_TrainCode/code/opts.lua'.
-
 For more informaiton, please refer to [EDSR(Torch)](https://github.com/LimBee/NTIRE2017).
 
