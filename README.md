@@ -1,6 +1,15 @@
 # DDistill-SR
-Codes for upcoming TMM paper "DDistill-SR: Reparameterized Dynamic Distillation Network for Lightweight Image Super-Resolution".
+Codes for TMM paper "[DDistill-SR: Reparameterized Dynamic Distillation Network for Lightweight Image Super-Resolution](https://ieeexplore.ieee.org/document/9939085)".
 
+```
+@ARTICLE{9939085,
+  author={Wang, Yan and Su, Tongtong and Li, Yusen and Cao, Jiuwen and Wang, Gang and Liu, Xiaoguang},
+  journal={IEEE Transactions on Multimedia}, 
+  title={DDistill-SR: Reparameterized Dynamic Distillation Network for Lightweight Image Super-Resolution}, 
+  year={2022},
+  pages={1-13},
+  doi={10.1109/TMM.2022.3219646}}
+```
 ### Training and Testing
 * Training with [EDSR framework](https://github.com/sanghyun-son/EDSR-PyTorch) or [BasicSR framework](https://github.com/XPixelGroup/BasicSR).
   * Download training data (800 + 2650 images) from [DIV2K](https://data.vision.ee.ethz.ch/cvl/DIV2K/) and [Flickr2K](http://cv.snu.ac.kr/research/EDSR/Flickr2K.tar).
