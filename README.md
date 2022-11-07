@@ -28,6 +28,5 @@ Codes for TMM paper "[DDistill-SR: Reparameterized Dynamic Distillation Network 
 * Pretrained models available at [model-backup](https://github.com/icandle/DDistill-SR/tree/main/model-backup).    
 * Visual results available at [Baidu Pan](https://pan.baidu.com/s/1FpD5ucp_G31TQoxZDa5acQ?pwd=ddsr).
 
----
 ### Acknowledgement 
 Our RDU is based on existing dynamic and reparameterized methods, thanks for their enlightening work！
