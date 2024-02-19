@@ -247,7 +247,7 @@ def pixelshuffle_block_cpc(in_channels, out_channels, upscale_factor=2, kernel_s
     return nn.Sequential(conv, pixel_shuffle, conv1)
 
 class DDistill_SR_Inference(nn.Module):
-    def __init__(self, in_nc=3, out_nc=3, nf=56, num_modules=4, scale=4, lite=False, deploy=True,dynamic=True,L=None,style='DBB',res=True):
+    def __init__(self, in_nc=3, out_nc=3, nf=56, num_modules=4, scale=4, lite=False, deploy=True,dynamic=True,L=16,style='DBB',res=True):
         super(DDistill_SR_Inference, self).__init__()
         assert res == True
         assert deploy == True
