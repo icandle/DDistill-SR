@@ -9,7 +9,7 @@
 
 <p align="center">
 <a href="https://ieeexplore.ieee.org/abstract/document/9939085" alt="IEEE">
-    <img src="https://img.shields.io/badge/IEEE-TMM 2022-367DBD" /></a> 
+    <img src="https://img.shields.io/badge/IEEE-TMM 2023-367DBD" /></a> 
 <a href="https://arxiv.org/abs/2312.14551" alt="arXiv">
     <img src="https://img.shields.io/badge/arXiv-2312.14551-b31b1b.svg?style=flat" /></a>
 <a href="https://github.com/icandle/DDistill-SR/blob/main/LICENSE" alt="license">
