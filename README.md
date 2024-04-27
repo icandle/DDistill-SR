@@ -1,7 +1,22 @@
-# DDistill-SR
-Codes for TMM paper "[DDistill-SR: Reparameterized Dynamic Distillation Network for Lightweight Image Super-Resolution](https://arxiv.org/abs/2312.14551)".
+## <div align="center"> DDistill-SR: Reparameterized Dynamic Distillation Network for Lightweight Image Super-Resolution </div>
 
-> ***Abstract:*** Recent research on deep convolutional neural networks (CNNs) has provided a significant performance boost on efficient super-resolution (SR) tasks by trading off the performance and applicability. However, most existing methods focus on subtracting feature processing consumption to reduce the parameters and calculations without refining the immediate features, which leads to inadequate information in the restoration. In this paper, we propose a lightweight network termed DDistill-SR, which significantly improves the SR quality by capturing and reusing more helpful information in a static-dynamic feature distillation manner. Specifically, we propose a plug-in reparameterized dynamic unit (RDU) to promote the performance and inference cost trade-off. During the training phase, the RDU learns to linearly combine multiple reparameterizable blocks by analyzing varied input statistics to enhance layer-level representation. In the inference phase, the RDU is equally converted to simple dynamic convolutions that explicitly capture robust dynamic and static feature maps. Then, the information distillation block is constructed by several RDUs to enforce hierarchical refinement and selective fusion of spatial context information. Furthermore, we propose a dynamic distillation fusion (DDF) module to enable dynamic signals aggregation and communication between hierarchical modules to further improve performance. Empirical results show that our DDistill-SR outperforms the baselines and achieves state-of-the-art results on most super-resolution domains with much fewer parameters and less computational overhead.
+<div align="center"> 
+
+[Yan Wang](https://scholar.google.com/citations?user=SXIehvoAAAAJ&hl=en)<sup>1</sup>, [Tongtong Su](https://scholar.google.com/citations?user=anILSE0AAAAJ&hl=en&oi=sra)<sup>1</sup>, [Yusen Li](https://scholar.google.com/citations?user=4EJ9aekAAAAJ&hl=en&oi=ao)<sup>1†</sup>, [Jiuwen Cao](https://scholar.google.com/citations?user=Vo_suaYAAAAJ&hl=en&oi=sra)<sup>2</sup>, [Gang Wang](https://scholar.google.com/citations?user=p8pvqz8AAAAJ&hl=en&oi=sra)<sup>1</sup>, Xiaoguang Liu<sup>1</sup>
+</div>
+
+<p align="center"> <sup>1</sup>Nankai University, <sup>2</sup>Hangzhou Dianzi University </p>
+
+<p align="center">
+<a href="https://ieeexplore.ieee.org/abstract/document/9939085" alt="IEEE">
+    <img src="https://img.shields.io/badge/IEEE-TMM 2022-367DBD" /></a> 
+<a href="https://arxiv.org/abs/2312.14551" alt="arXiv">
+    <img src="https://img.shields.io/badge/arXiv-2312.14551-b31b1b.svg?style=flat" /></a>
+<a href="https://github.com/icandle/DDistill-SR/blob/main/LICENSE" alt="license">
+    <img src="https://img.shields.io/badge/license-Apache--2.0-%23B7A800" /></a> 
+</p>
+
+**Abstract:** Recent research on deep convolutional neural networks (CNNs) has provided a significant performance boost on efficient super-resolution (SR) tasks by trading off the performance and applicability. However, most existing methods focus on subtracting feature processing consumption to reduce the parameters and calculations without refining the immediate features, which leads to inadequate information in the restoration. In this paper, we propose a lightweight network termed DDistill-SR, which significantly improves the SR quality by capturing and reusing more helpful information in a static-dynamic feature distillation manner. Specifically, we propose a plug-in reparameterized dynamic unit (RDU) to promote the performance and inference cost trade-off. During the training phase, the RDU learns to linearly combine multiple reparameterizable blocks by analyzing varied input statistics to enhance layer-level representation. In the inference phase, the RDU is equally converted to simple dynamic convolutions that explicitly capture robust dynamic and static feature maps. Then, the information distillation block is constructed by several RDUs to enforce hierarchical refinement and selective fusion of spatial context information. Furthermore, we propose a dynamic distillation fusion (DDF) module to enable dynamic signals aggregation and communication between hierarchical modules to further improve performance. Empirical results show that our DDistill-SR outperforms the baselines and achieves state-of-the-art results on most super-resolution domains with much fewer parameters and less computational overhead.
 ```
 @ARTICLE{9939085,
   author={Wang, Yan and Su, Tongtong and Li, Yusen and Cao, Jiuwen and Wang, Gang and Liu, Xiaoguang},
